@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}
+Contact | FairFight Technologies
+{% endblock %}
+
+
+{% block content %}
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="section-label">
+            CONTACT
+        </span>
+
+        <h1>
+            Let's start a
+            <span>conversation.</span>
+        </h1>
+
+        <p>
+            Interested in JoyMouse, partnerships, demonstrations
+            or accessibility technology?
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="contact-section">
+
+    <div class="container contact-container">
+
+        <div>
+
+            <h2>Get in touch</h2>
+
+            <p>
+                Tell us what you're working on and how
+                FairFight Technologies can help.
+            </p>
+
+            <div class="contact-info">
+
+                <p>
+                    <strong>Email</strong>
+                    <br>
+                    fairfight.technologies@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <!-- =========================
+                 FLASH MESSAGES
+            ========================== -->
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+
+                {% if messages %}
+
+                    <div class="flash-container">
+
+                        {% for category, message in messages %}
+
+                            <div class="flash {{ category }}">
+                                {{ message }}
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+
+                {% endif %}
+
+            {% endwith %}
+
+
+            <!-- =========================
+                 CONTACT FORM
+            ========================== -->
+
+            <form
+                class="contact-form"
+                action="{{ url_for('send_message') }}"
+                method="POST"
+            >
+
+                <label>
+                    Name *
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+                </label>
+
+
+                <label>
+                    Email *
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+                </label>
+
+
+                <label>
+                    Organization
+
+                    <input
+                        type="text"
+                        name="organization"
+                        placeholder="Company / College / Organization"
+                    >
+                </label>
+
+
+                <label>
+                    Phone
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="+91 XXXXX XXXXX"
+                    >
+                </label>
+
+
+                <label>
+                    Message *
+
+                    <textarea
+                        name="message"
+                        rows="7"
+                        placeholder="Tell us about your requirement..."
+                        required
+                    ></textarea>
+
+                </label>
+
+
+                <button
+                    type="submit"
+                    class="btn primary"
+                >
+                    Send Message →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

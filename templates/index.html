@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}
+FairFight Technologies | Technology Without Barriers
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-text">
+
+            <span class="eyebrow">
+                FAIRFIGHT TECHNOLOGIES
+            </span>
+
+            <h1>
+                Technology that
+                <span>removes barriers.</span>
+            </h1>
+
+            <p>
+                We build intelligent accessibility technologies
+                that help people interact with the digital world
+                in new ways.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="{{ url_for('joymouse') }}" class="btn primary">
+                    Explore JoyMouse →
+                </a>
+
+                <a href="{{ url_for('contact') }}" class="btn secondary">
+                    Request a Demo
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="hero-card">
+
+                <div class="hero-card-label">
+                    ACCESSIBILITY TECHNOLOGY
+                </div>
+
+                <h2>JoyMouse</h2>
+
+                <p>
+                    Hands-free computer interaction powered by
+                    computer vision.
+                </p>
+
+                <div class="pulse"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="intro-section">
+
+    <div class="container">
+
+        <span class="section-label">
+            WHAT WE DO
+        </span>
+
+        <h2>
+            Building technology for
+            <span>human potential.</span>
+        </h2>
+
+        <p class="section-description">
+            FairFight Technologies develops innovative software
+            solutions designed to make technology more accessible,
+            inclusive and human-centered.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="product-section">
+
+    <div class="container product-grid">
+
+        <div>
+
+            <span class="section-label">
+                OUR FLAGSHIP PRODUCT
+            </span>
+
+            <h2>
+                Meet <span>JoyMouse.</span>
+            </h2>
+
+            <p>
+                JoyMouse is a software-based, hands-free computer
+                interaction system designed to help people with
+                upper-limb locomotor disabilities interact with
+                computers.
+            </p>
+
+            <a href="{{ url_for('joymouse') }}" class="text-link">
+                Discover JoyMouse →
+            </a>
+
+        </div>
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                ◉
+            </div>
+
+            <h3>Hands-Free Interaction</h3>
+
+            <p>
+                Computer interaction using facial movement,
+                gestures and intelligent tracking.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <h2>
+            Let's build a more accessible digital world.
+        </h2>
+
+        <p>
+            Interested in FairFight Technologies or JoyMouse?
+        </p>
+
+        <a href="{{ url_for('contact') }}" class="btn primary">
+            Get in Touch →
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
